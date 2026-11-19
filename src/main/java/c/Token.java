@@ -1,4 +1,4 @@
-package lispy;
+package c;
 
 public record Token(TokenKind kind, String lexeme) {
 

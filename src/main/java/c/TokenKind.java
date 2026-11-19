@@ -1,4 +1,4 @@
-package lispy;
+package c;
 
 public enum TokenKind {
   PLUS("+"),

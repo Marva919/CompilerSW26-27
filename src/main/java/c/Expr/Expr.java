@@ -1,4 +1,4 @@
-package lispy.Expr;
+package c.Expr;
 
 public interface Expr {}
 

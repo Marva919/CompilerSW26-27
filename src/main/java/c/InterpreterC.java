@@ -1,13 +1,13 @@
-package lispy;
+package c;
 
-import lispy.Expr.AddExpr;
-import lispy.Expr.Expr;
-import lispy.Expr.IntLiteral;
-import lispy.Expr.SubExpr;
-import lispy.Value.IntVal;
-import lispy.Value.Value;
+import c.Expr.AddExpr;
+import c.Expr.Expr;
+import c.Expr.IntLiteral;
+import c.Expr.SubExpr;
+import c.Value.IntVal;
+import c.Value.Value;
 
-public class InterpreterLint {
+public class InterpreterC {
 
   public Value eval(Expr expr) {
     return switch (expr) {

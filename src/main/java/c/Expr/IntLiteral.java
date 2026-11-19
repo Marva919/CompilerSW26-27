@@ -1,3 +1,3 @@
-package lispy.Expr;
+package c.Expr;
 
 public record IntLiteral(int value) implements Expr {}

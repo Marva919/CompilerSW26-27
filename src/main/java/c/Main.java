@@ -1,7 +1,7 @@
-package lispy;
+package c;
 
-import lispy.Expr.Expr;
-import lispy.Value.Value;
+import c.Expr.Expr;
+import c.Value.Value;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class Main {
 
   static Value run(String source) {
-    List<Token> tokens = new LispyLexerLint().scan(source);
-    Expr ast = new LispyParserLint().parse(tokens);
-    return new InterpreterLint().eval(ast);
+    List<Token> tokens = new LispyLexerC().scan(source);
+    Expr ast = new LispyParserC().parse(tokens);
+    return new InterpreterC().eval(ast);
   }
 
   public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Main {
     }
     // einfache REPL: eine L-Int-Zeile pro Eingabe, leere Zeile beendet
     Scanner in = new Scanner(System.in);
-    System.out.print("lint> ");
+    System.out.print("C> ");
     while (in.hasNextLine()) {
       String line = in.nextLine();
       if (line.isBlank()) break;
@@ -31,7 +31,7 @@ public class Main {
       } catch (RuntimeException e) {
         System.out.println("error: " + e.getMessage());
       }
-      System.out.print("lint> ");
+      System.out.print("C> ");
     }
   }
 }

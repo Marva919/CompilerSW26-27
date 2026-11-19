@@ -1,12 +1,12 @@
-package lispy;
+package c;
 
-import static lispy.TokenKind.*;
+import static c.TokenKind.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class LispyLexerLint {
+public class LispyLexerC {
   protected String source;
   protected int current;
 

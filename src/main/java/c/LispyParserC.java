@@ -1,20 +1,20 @@
-package lispy;
+package c;
 
-import lispy.Expr.AddExpr;
-import lispy.Expr.Expr;
-import lispy.Expr.IntLiteral;
-import lispy.Expr.SubExpr;
+import c.Expr.AddExpr;
+import c.Expr.Expr;
+import c.Expr.IntLiteral;
+import c.Expr.SubExpr;
 
 import javax.accessibility.AccessibleKeyBinding;
 
-import static lispy.TokenKind.*;
+import static c.TokenKind.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
-public class LispyParserLint {
+public class LispyParserC {
   protected List<Token> tokens;
   protected int current;
 
