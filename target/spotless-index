@@ -1,11 +1,12 @@
 sJDED1KiXq/yKfeQbnDSw3RHT4TJz12NXumD5ebAgVA=
-src\main\java\c\Expr\AddExpr.java 2026-11-19T14:36:11.599619600Z
-src\main\java\c\Expr\IntLiteral.java 2026-11-19T14:36:12.715195800Z
-src\main\java\c\Expr\SubExpr.java 2026-11-19T14:36:13.215201900Z
-src\main\java\c\LispyLexerC.java 2026-11-19T14:23:35.699040Z
-src\main\java\c\TokenKind.java 2026-11-19T14:36:22.192360200Z
-src\main\java\c\Value\IntVal.java 2026-11-19T14:36:13.697158200Z
-src\main\java\c\Value\Value.java 2026-11-19T14:36:14.153494500Z
+src\main\java\c\CInterpreter.java 2026-11-19T16:14:23.267189200Z
+src\main\java\c\CLexer.java 2026-11-19T15:08:52.156215400Z
+src\main\java\c\CTokenKind.java 2026-11-19T16:14:25.319241600Z
+src\main\java\c\Expr\CAddExpr.java 2026-11-19T16:14:19.736345200Z
+src\main\java\c\Expr\CIntLiteral.java 2026-11-19T16:14:20.922029400Z
+src\main\java\c\Expr\CSubExpr.java 2026-11-19T16:14:21.412046900Z
+src\main\java\c\Value\CIntVal.java 2026-11-19T16:14:22.151307100Z
+src\main\java\c\Value\CValue.java 2026-11-19T16:14:22.668252300Z
 src\main\java\lispy\Expr\AddExpr.java 2026-11-19T14:20:32.255980100Z
 src\main\java\lispy\Expr\IntLiteral.java 2026-11-19T14:20:32.255980100Z
 src\main\java\lispy\Expr\SubExpr.java 2026-11-19T14:20:32.256980300Z

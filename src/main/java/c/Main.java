@@ -1,18 +1,18 @@
 package c;
 
-import c.Expr.Expr;
-import c.Value.Value;
-
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; 
+
+import c.Expr.CExpr;
+import c.Value.CValue;
 
 /** Pipeline: Text -> Lexer -> Token -> Parser -> AST -> Interpreter -> Value */
 public class Main {
 
-  static Value run(String source) {
-    List<Token> tokens = new LispyLexerC().scan(source);
-    Expr ast = new LispyParserC().parse(tokens);
-    return new InterpreterC().eval(ast);
+  static CValue run(String source) {
+    List<CToken> tokens = new CLexer().scan(source);
+    CExpr ast = new CParser().parse(tokens);
+    return new CInterpreter().eval(ast);
   }
 
   public static void main(String[] args) {

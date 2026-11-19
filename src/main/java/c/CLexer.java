@@ -1,19 +1,25 @@
 package c;
 
-import static c.TokenKind.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class LispyLexerC {
+import static c.CTokenKind.EOF;
+import static c.CTokenKind.INT;
+import static c.CTokenKind.LPAREN;
+import static c.CTokenKind.MINUS;
+import static c.CTokenKind.PLUS;
+import static c.CTokenKind.RPAREN;
+import static c.CTokenKind.SEMI;
+
+public class CLexer {
   protected String source;
   protected int current;
 
-  public List<Token> scan(String input) {
+  public List<CToken> scan(String input) {
     source = input;
     current = 0;
-    List<Token> tokens = new ArrayList<>();
+    List<CToken> tokens = new ArrayList<>();
 
     do tokens.add(nextToken());
     while (tokens.getLast().kind() != EOF);
@@ -21,24 +27,24 @@ public class LispyLexerC {
     return tokens;
   }
 
-  protected Token nextToken() {
+  protected CToken nextToken() {
     skipIrrelevant();
 
-    if (isAtEnd()) return Token.from(EOF);
+    if (isAtEnd()) return CToken.from(EOF);
 
     char c = advance();
 
     if (Character.isDigit(c)) {
       String lexeme = c + readWhile(Character::isDigit);
-      return Token.from(INT, lexeme);
+      return CToken.from(INT, lexeme);
     }
 
     return switch (c) {
-      case '(' -> Token.from(LPAREN);
-      case ')' -> Token.from(RPAREN);
-      case '+' -> Token.from(PLUS);
-      case '-' -> Token.from(MINUS);
-      case ';' -> Token.from(SEMI);
+      case '(' -> CToken.from(LPAREN);
+      case ')' -> CToken.from(RPAREN);
+      case '+' -> CToken.from(PLUS);
+      case '-' -> CToken.from(MINUS);
+      case ';' -> CToken.from(SEMI);
       default ->
           throw new RuntimeException("unexpected character '" + c + "' at index " + (current - 1));
     };

@@ -1,6 +1,6 @@
 package c;
 
-public enum TokenKind {
+public enum CTokenKind {
   PLUS("+"),
   MINUS("-"),
   LPAREN("("),
@@ -11,7 +11,7 @@ public enum TokenKind {
 
   private final String fixedLexeme;
 
-  TokenKind(String fixedLexeme) {
+  CTokenKind(String fixedLexeme) {
     this.fixedLexeme = fixedLexeme;
   }
 
